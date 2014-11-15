@@ -5,9 +5,9 @@ public class Vogt extends Estimador {
 	private int n_til;
 	
 	@Override
-	public int backlog(int e, int s, int c) {
-		int L = e + s + c;
-		int n = s + 2*c;
+	public int backlog(double e, double s, double c) {
+		double L = e + s + c;
+		double n = s + 2*c;
 		double dist_n = -1;
 		double dist_p = 0;
 		
@@ -30,7 +30,7 @@ public class Vogt extends Estimador {
 			n = n + 1;
 		}
 		
-		this.n_til = n-1;
+		this.n_til = (int)(n-1);
 		
 		return this.n_til;
 	}
@@ -45,7 +45,7 @@ public class Vogt extends Estimador {
 		return result;
 	}
 	
-	private double B(int r, int n, double L) {
+	private double B(double r, double n, double L) {
 		return combinatorial(n, r) * Math.pow( (1/L), r ) * Math.pow( (L-1.0)/L, (n-r) );
 	}
 	

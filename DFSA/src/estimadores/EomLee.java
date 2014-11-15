@@ -3,7 +3,7 @@ package estimadores;
 public class EomLee extends Estimador {
 
 	@Override
-	public int backlog(int e, int s, int c) {
+	public int backlog(double e, double s, double c) {
 		return 0;
 	}
 
