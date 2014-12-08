@@ -4,7 +4,3 @@
 *.si
 
 /bin
-
-/indice-lucene
-
-.classpath
