@@ -1,4 +1,4 @@
-package leitores;
+package readers;
 
 public class Tag {
 	

@@ -1,7 +1,11 @@
-package estimadores;
+package estimators;
 
-public class EomLee extends Estimador {
+public class EomLee extends Estimator {
 
+	public EomLee() {
+		super("Eom-Lee");
+	}
+	
 	@Override
 	public int backlog(double e, double s, double c) {
 		return 0;

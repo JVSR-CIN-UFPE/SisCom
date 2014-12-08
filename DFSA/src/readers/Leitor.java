@@ -1,14 +1,14 @@
-package leitores;
+package readers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import estimadores.Estimador;
-import estimadores.LowerBound;
+import estimators.Estimator;
+import estimators.LowerBound;
 
 public class Leitor {
 	
-	private Estimador estimador;
+	private Estimator estimador;
 	private int L;
 	
 	public Leitor() {
