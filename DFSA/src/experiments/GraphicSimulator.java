@@ -46,13 +46,13 @@ public class GraphicSimulator extends ApplicationFrame {
 					PlotOrientation.VERTICAL, true, true, false);
 	
 			NumberAxis xAxis = new NumberAxis();
-			xAxis.setRange(0, xMax);
+			xAxis.setRange(100, xMax);
 			xAxis.setLabel("Quant. Tags");
 			
 			NumberAxis yAxis = new NumberAxis();
 //			yAxis.setTickUnit(new NumberTickUnit(10));
 			yAxis.setRange(0, yMax);
-			yAxis.setLabel("Error");
+			yAxis.setLabel("Slots");
 		
 			XYPlot plot = (XYPlot) chart.getPlot();
 			plot.setDomainAxis(xAxis);
