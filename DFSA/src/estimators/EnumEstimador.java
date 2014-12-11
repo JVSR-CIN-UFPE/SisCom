@@ -7,7 +7,8 @@ public enum EnumEstimador {
 	LOWER_BOUND,
 	SCHOUTE,
 	VAHEDI,
-	VOGT;
+	VOGT,
+	ILCM;
 	
 	public Estimator getEstimator() {
 		switch (this) {
@@ -23,6 +24,8 @@ public enum EnumEstimador {
 			return new Vahedi();
 		case VOGT:
 			return new Vogt();
+		case ILCM:
+			return new ILCM();
 		default:
 			return null;
 		}
