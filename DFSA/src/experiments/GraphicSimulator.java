@@ -50,7 +50,6 @@ public class GraphicSimulator extends ApplicationFrame {
 			xAxis.setLabel("Quant. Tags");
 			
 			NumberAxis yAxis = new NumberAxis();
-//			yAxis.setTickUnit(new NumberTickUnit(10));
 //			yAxis.setRange(0, yMax);
 			yAxis.setLabel("Slots");
 		
@@ -62,9 +61,8 @@ public class GraphicSimulator extends ApplicationFrame {
 			XYLineAndShapeRenderer renderer = (XYLineAndShapeRenderer) plot.getRenderer();
 			renderer.setBaseShapesVisible(true);
 			
-			/* Step -3 : Write line chart to a file */               
-			int width=640; /* Width of the image */
-			int height=480; /* Height of the image */                
+			int width=640;
+			int height=480;                
 			File lineChart=new File("images/"+filename+".png");              
 			ChartUtilities.saveChartAsPNG(lineChart,chart,width,height);
 			

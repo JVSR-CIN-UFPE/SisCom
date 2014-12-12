@@ -142,8 +142,6 @@ public class Simulator {
 				
 				int L = this.L_init;
 				
-//				System.out.println("Estimador: " + estimator.getName() + ", Experimento: " + i + ", Tags: " + tags + ", L :" + L);
-				
 				int[] status = this.randomTags(L, tags);
 				
 				int e = status[0];
@@ -198,8 +196,6 @@ public class Simulator {
 				
 				double error = 100*Math.abs(tags-n)/tags;
 				
-				System.out.println(e +", "+ s +", "+ c + " --> " + n + " >> Error: " + error);
-				
 				XYDataItem item = itens.get((tags/100)-1);
 				item.setY(item.getY().doubleValue() + error/experiments);
 			}
@@ -236,24 +232,13 @@ public class Simulator {
 	}
 	
 	public static void main(String[] args) {
-		int L = 128;
+		int L = 64;
 		
-//		new Simulator(L).simulateMultiples("just-lower-bound", Arrays.asList(EnumEstimador.LOWER_BOUND.getEstimator()));
-//		new Simulator(L).simulateMultiples("just-schoute", Arrays.asList(EnumEstimador.SCHOUTE.getEstimator()));
-//		new Simulator(L).simulateMultiples("just-vogt", Arrays.asList(EnumEstimador.VOGT.getEstimator()));
-//		new Simulator(L).simulateMultiples("just-chen", Arrays.asList(EnumEstimador.CHEN.getEstimator()));
-//		new Simulator(L).simulateMultiples("just-vahedi", Arrays.asList(EnumEstimador.VAHEDI.getEstimator()));
-		new Simulator(L).simulateMultiples("all-estimators-for-1000", Arrays.asList(
-				EnumEstimador.LOWER_BOUND.getEstimator(), 
-				EnumEstimador.SCHOUTE.getEstimator(),
-				EnumEstimador.CHEN.getEstimator()));
-//		new Simulator(L).simulateMultiples("all-estimators-for-1000_plus_ILCM", Arrays.asList(
-//				EnumEstimador.LOWER_BOUND.getEstimator(), 
-//				EnumEstimador.SCHOUTE.getEstimator(),
-//				EnumEstimador.CHEN.getEstimator(),
-//				EnumEstimador.ILCM.getEstimator()));
-		
-//		new Simulator(L).simulateMultiples("ILCM-for-1000", Arrays.asList(
-//				EnumEstimador.ILCM.getEstimator()));
+		new Simulator(L).simulateMultiples("with-ILCM-estimators-for-64-init-1000", Arrays.asList(
+				EnumEstimador.LOWER_BOUND.getEstimator()
+				, EnumEstimador.SCHOUTE.getEstimator()
+				, EnumEstimador.CHEN.getEstimator()
+				, EnumEstimador.ILCM.getEstimator()
+				));
 	}
 }
